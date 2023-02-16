@@ -195,7 +195,7 @@ export class BarcodeScannerWeb extends WebPlugin implements BarcodeScannerPlugin
 
         if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
           const constraints: MediaStreamConstraints = {
-            video: { facingMode: { exact: "environment" } },
+            video: { facingMode: "environment" },
           };
 
           navigator.mediaDevices.getUserMedia(constraints).then(
